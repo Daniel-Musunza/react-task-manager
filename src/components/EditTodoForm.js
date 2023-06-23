@@ -10,7 +10,7 @@ export const EditTodoForm = ({editTodo, task}) => {
         editTodo(value, task.id);
         setValue("");
       }else{
-        alert("You Can't add an empty task");
+        alert("empty task");
     }
     }
   return (
