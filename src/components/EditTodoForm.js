@@ -4,10 +4,14 @@ export const EditTodoForm = ({editTodo, task}) => {
     const [value, setValue] = useState(task.task)
 
     const handleSubmit = e => {
+      if(value){
         e.preventDefault();
 
         editTodo(value, task.id);
-setValue("")
+        setValue("");
+      }else{
+        alert("You Can't add an empty task");
+    }
     }
   return (
     <form className="TodoForm" onSubmit={handleSubmit}>
