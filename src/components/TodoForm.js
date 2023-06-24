@@ -27,7 +27,7 @@ export const TodoForm = ({ addTodo }) => {
       />
       <input
         type="time"
-        className="todo-input"
+        className="time-input"
         value={time}
         onChange={(e) => setTime(e.target.value)}
       />

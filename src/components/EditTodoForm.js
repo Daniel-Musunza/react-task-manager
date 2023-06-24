@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 
 export const EditTodoForm = ({editTodo, task}) => {
-    const [value, setValue] = useState(task.task)
+    const [value, setValue] = useState(task.task);
+    const [time, setTime] = useState(task.time);
 
     const handleSubmit = e => {
       if(value){
         e.preventDefault();
 
-        editTodo(value, task.id);
+        editTodo(value, time, task.id);
         setValue("");
+        setTime('');
       }else{
         alert("empty task");
     }
@@ -19,6 +21,12 @@ export const EditTodoForm = ({editTodo, task}) => {
         placeholder='task '
         value={(value)}
         onChange={(e) => setValue(e.target.value)}></input>
+          <input
+        type="time"
+        className="time-input"
+        value={time}
+        onChange={(e) => setTime(e.target.value)}
+      />
         <button type='submit' className='todo-btn'>Update</button>
     </form>
   )

@@ -10,7 +10,7 @@ export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
         {task.task}
       </p>
       <div>
-      {task.time}hrs
+      <span>{task.time}hrs</span>
         <i className="fa-solid fa-pen-to-square" onClick={() => editTodo(task.id)}></i>
         <i className="fa-solid fa-trash" onClick={() => deleteTodo(task.id)}></i>
       </div>

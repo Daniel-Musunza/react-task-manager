@@ -50,6 +50,15 @@ h1 {
   color: #ffffff4d;
 }
 
+.time-input {
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.55rem;
+  cursor: pointer;
+  color: #fff;
+  
+}
 .todo-btn {
   background: #8758ff;
   color: #fff;
@@ -80,3 +89,6 @@ h1 {
   text-decoration: line-through;
 }
  
+span {
+  padding-right: 5px;
+}
