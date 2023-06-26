@@ -7,10 +7,9 @@ export const EditTodoForm = ({editTodo, task}) => {
     const handleSubmit = e => {
       if(value){
         e.preventDefault();
-
         editTodo(value, time, task.id);
-        setValue("");
         setTime('');
+        setValue("");
       }else{
         alert("empty task");
     }
