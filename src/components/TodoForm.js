@@ -11,6 +11,7 @@ export const TodoForm = ({ addTodo }) => {
       addTodo(value, time);
       setValue('');
       setTime('');
+      console.log(value);
     } else {
       alert("You can't add an empty task");
     }
